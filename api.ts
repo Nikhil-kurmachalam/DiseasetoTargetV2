@@ -557,8 +557,8 @@ export const api = {
     // 2. Extract unique genes from PubTator3 export
     const geneCount: Record<string, number> = {};
     const pmidBatches = [];
-    for (let i = 0; i < uniquePmids.length; i += 20) {
-      pmidBatches.push(uniquePmids.slice(i, i + 20));
+    for (let i = 0; i < uniquePmids.length; i += 10) {
+      pmidBatches.push(uniquePmids.slice(i, i + 10));
     }
 
     for (const batch of pmidBatches) {
