@@ -13,7 +13,8 @@ async function startServer() {
 
   app.use(express.json({ limit: '50mb' }));
 
-  // Notion Export Endpoint
+  // Notion Export Endpoint -testing again
+  
   app.post("/api/export/notion", async (req, res) => {
     const { targets, disease } = req.body;
     const notionToken = process.env.NOTION_TOKEN;
